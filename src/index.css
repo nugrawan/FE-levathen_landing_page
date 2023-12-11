@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 300;
+    src: url(./assets/fonts/PlusJakartaSans-Light.ttf);
+  }
+
+  @font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 400;
+    src: url(./assets/fonts/PlusJakartaSans-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    src: url(./assets/fonts/PlusJakartaSans-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    src: url(./assets/fonts/PlusJakartaSans-SemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: Plus Jakarta Sans;
+    font-weight: 700;
+    src: url(./assets/fonts/PlusJakartaSans-Bold.ttf);
+  }
+
+  :root {
+    --primary: #EE7214;
+    --status-success: #527853;
+    --status-warning: #FFC107;
+    --status-notavailable: #E0E0E0;
+  }
+
+  html {
+    font-family: "Plus Jakarta Sans", "Times New Roman";
+    scroll-behavior: smooth;
+  }
+
+  .def-shadow {
+    box-shadow: 0px 4.4795050621032715px 279.96905517578125px 0px rgba(0, 0, 0, 0.096);
+  }
+}
+
+@layer components {
+  .cont {
+    @apply max-w-7xl px-6 mx-auto;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+}
