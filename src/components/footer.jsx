@@ -120,27 +120,27 @@ export function Footer() {
 
 export function FooterMobile() {
   return (
-    <footer className=" pt-16 mb-32 cont md:hidden block">
-      <div className="flex flex-col items-center border-b py-5">
-        <h1 className="text-2xl font-bold flex gap-2 text-primary-default"><img src="./logo-filled.svg" alt="logo" className="md:hidden block w-7" />Levathen</h1>
-        <ul className="flex flex-col gap-4 mt-12 text-center">
-          <a href="/about" className="text-[#000]/50">
+    <footer className=" pt-16 bg-primary-default m-5 p-10 rounded-xl cont md:hidden block">
+      <div className="flex flex-col items-center border-b py-5 text-white">
+        <h1 className="text-2xl font-bold flex gap-2">Levathen</h1>
+        <ul className="flex flex-col gap-4 my-12 text-center">
+          <a href="/about">
             About Us
           </a>
-          <a href="/pricing" className="text-[#000]/50">
+          <a href="/pricing">
             Pricing
           </a>
-          <a href="/office" className="text-[#000]/50">
+          <a href="/office">
             Offices
           </a>
-          <a href="/spaces" className="text-[#000]/50">
+          <a href="/spaces">
             Spaces
           </a>
-          <a href="/contact-us" className="text-[#000]/50">
+          <a href="/contact-us">
             Contact
           </a>
         </ul>
-        <div className="flex gap-5 mt-5">
+        <div className="flex gap-5 my-5">
           {icons.map((icon, i) => (
             <img key={i} className="h-5" src={icon.icon} alt="icon" />
           ))}
@@ -148,19 +148,10 @@ export function FooterMobile() {
       </div>
 
       <div className="mt-6 cont">
-        <p className="text-[#000]/50 text-sm text-center">
+        <p className="font-thin text-center text-gray-200">
           © 2023 All rights reserved - Levathen
         </p>
-
-        <div className="flex gap-8 justify-center">
-          <p className="text-[#000]/50 text-sm text-center mt-10">
-            Term of Service
-          </p>
-          <p className="text-[#000]/50 text-sm text-center mt-10">
-            Privacy Policy
-          </p>
-        </div>
-      </div>
-    </footer>
+      </div >
+    </footer >
   );
 }

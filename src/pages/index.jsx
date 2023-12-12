@@ -11,9 +11,9 @@ import { Card, CardDesc, CardTitle } from "../components/card";
 
 function HeroSection() {
   return (
-    <div className="bg-[url(/images/chicken.jpg)] bg-cover p-40 text-white mb-32">
-      <Section className="mt-4" row>
-        <SectionExplain className="flex flex-col gap-4 w-[60%]">
+    <div className="bg-[url(/images/chicken.jpg)] bg-center bg-cover bg-no-repeat md:bg-left lg:bg-cover py-10 md:p-20 lg:p-32 xl:p-40 text-white mb-10 md:mb-28">
+      <Section>
+        <SectionExplain className="flex flex-col md:gap-4 gap-0 w-[100%] lg:w-[60%]">
           <SectionHeading className="animate-fade-up animate-duration-[300ms] animate-delay-300 animate-ease-in">
             Siap Membantu Para Peternak Ayam Hingga Menghasilkan Profit Yang Maksimal
           </SectionHeading>
@@ -21,7 +21,7 @@ function HeroSection() {
             Kami bekerja sama dengan para peternak ayam petelur dan ayam pedaging, sehingga menghasilkan profit yang lebih maksimal dengan berbagai layanan terbaik kami!
           </SectionDescription>
 
-          <div className="flex gap-6 animate-fade-up animate-duration-[700ms] animate-delay-700 animate-ease-in-out">
+          <div className="animate-fade-up animate-duration-[700ms] animate-delay-700 animate-ease-in-out">
             <Button>Layanan Kami</Button>
           </div>
         </SectionExplain>
@@ -71,55 +71,6 @@ function OurServicesSection() {
           <Card key={i} active={i === 1} >
             <CardTitle>{service.title}</CardTitle>
             <CardDesc>{service.desc}</CardDesc>
-            <div className="inline-flex gap-2 cursor-pointer group items-center">
-              <p className="text-primary-default font-bold">Learn more</p>
-            </div>
-          </Card>
-        ))}
-      </div>
-    </Section>
-  );
-}
-
-const whyServiced = [
-  {
-    title: "Office Space",
-    image: "/images/home-why1.png",
-    desc: "Informal drop-in meeting spaces with secure WiFi, access to a printer, scanner and photocopier.",
-  },
-  {
-    title: "Coworking Space",
-    image: "/images/home-why2.png",
-    desc: "Informal drop-in meeting spaces with secure WiFi, access to a printer, scanner and photocopier.",
-  },
-  {
-    title: "Meeting Space",
-    image: "/images/home-why3.png",
-    desc: "Informal drop-in meeting spaces with secure WiFi, access to a printer, scanner and photocopier.",
-  },
-];
-
-function WhyServicesSection() {
-  return (
-    <Section className="mt-4 flex flex-col">
-      <SectionExplain className="md:w-2/3 w-full">
-        <SectionTag className="text-center">WHY SERVICED OFFICE</SectionTag>
-        <SectionHeading className="text-center">
-          We've helped thousands of fast-growing startups and teams
-        </SectionHeading>
-        <SectionDescription className="text-center">
-          Grow without restriction. By giving you space that can be changed as
-          your business grows. Only pay for the space you use with everything
-          you need to be included in one price.
-        </SectionDescription>
-      </SectionExplain>
-
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
-        {whyServiced.map((item, i) => (
-          <Card data-aos="fade-left" data-aos-duration="500" data-aos-delay="300" key={i}>
-            <img src={item.image} alt="why" />
-            <CardTitle>{item.title}</CardTitle>
-            <CardDesc>{item.desc}</CardDesc>
             <div className="inline-flex gap-2 cursor-pointer group items-center">
               <p className="text-primary-default font-bold">Learn more</p>
             </div>
@@ -202,11 +153,10 @@ function MainPage() {
     <>
       <HeroSection />
       <OurServicesSection />
-      <WhyServicesSection />
       <OurOfficeSection />
       <SectionThree />
     </>
   );
 }
 
-export { MainPage, WhyServicesSection };
+export { MainPage };
