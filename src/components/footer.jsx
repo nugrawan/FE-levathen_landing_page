@@ -9,7 +9,7 @@ const footItems = [
         link: "#",
       },
       {
-        name: "Pricing ",
+        name: "Founders",
         link: "#",
       },
       {
@@ -17,28 +17,28 @@ const footItems = [
         link: "#",
       },
       {
-        name: "Spaces",
+        name: "Partners",
         link: "#",
       },
     ],
   },
   {
-    title: "Product",
+    title: "Products",
     children: [
       {
-        name: "Office Space",
+        name: "All Products",
         link: "#",
       },
       {
-        name: "Business Lounge",
+        name: "Best Products",
         link: "#",
       },
       {
-        name: "Meeting Room",
+        name: "Services",
         link: "#",
       },
       {
-        name: "Virtual Office",
+        name: "Favorited services",
         link: "#",
       },
     ],
@@ -51,11 +51,11 @@ const footItems = [
         link: "#",
       },
       {
-        name: "Book A Tour",
+        name: "Admin",
         link: "#",
       },
       {
-        name: "Blog",
+        name: "Social Media",
         link: "#",
       },
       {
@@ -67,25 +67,27 @@ const footItems = [
 ];
 
 const icons = [
-  { icon: "./icons/facebook.png" },
-  { icon: "./icons/linkidn.png" },
-  { icon: "./icons/instagram.png" },
-  { icon: "./icons/twitter.png" },
+  { icon: "./icons/facebook.svg" },
+  { icon: "./icons/linkedin.svg" },
+  { icon: "./icons/instagram.svg" },
+  { icon: "./icons/twitter.svg" },
+  { icon: "./icons/envelope.svg" },
 ];
 
 export function Footer() {
   return (
-    <footer className=" mb-32 hidden md:block">
+    <footer className=" mt-32 hidden md:block bg-primary-default text-white m-5 rounded-lg">
       <div className="flex justify-between cont border-t pt-16">
         <div>
-          <h1 className="text-primary-default text-2xl font-bold">Levathen</h1>
-          <p className="text-sm leading-6 text-[#000]/50 text-left max-w-xs mt-4">
-            We want to build more than nice, shared office spaces. We want to
-            build a community.
+          <h1 className="text-2xl font-bold">Levathen</h1>
+          <p className="text-sm leading-6 text-left max-w-xs mt-4">
+            Kami ingin menjadikan indonesia sebagai produsen ternak dengan kualitas terbaik
           </p>
-          <div className="flex gap-5 my-10">
+          <div className="flex gap-5 text-white my-10">
             {icons.map((icon, i) => (
-              <img key={i} className="h-5" src={icon.icon} alt="icon" />
+              <a href="#">
+                <img key={i} className="h-5 hover:-translate-y-1" src={icon.icon} alt="icon" />
+              </a>
             ))}
           </div>
         </div>
@@ -97,7 +99,7 @@ export function Footer() {
               <ul className="flex flex-col gap-4 mt-6">
                 {item.children.map((child, i) => (
                   <li key={i}>
-                    <a href={child.link} className="text-[#000]/50 hover:underline">
+                    <a href={child.link} className="hover:underline">
                       {child.name}
                     </a>
                   </li>
@@ -108,11 +110,11 @@ export function Footer() {
         </div>
       </div>
       <div className="mt-6 cont">
-        <p className="text-[#000]/50 text-sm">
+        <p className="opacity-80 text-sm p-5">
           © 2023 All rights reserved - Levathen
         </p>
       </div>
-    </footer>
+    </footer >
   );
 }
 

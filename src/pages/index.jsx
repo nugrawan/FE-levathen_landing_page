@@ -11,7 +11,7 @@ import { Card, CardDesc, CardTitle } from "../components/card";
 
 function HeroSection() {
   return (
-    <div className="bg-[url(../public/images/chicken.jpg)] bg-cover p-40 text-white mb-32">
+    <div className="bg-[url(/images/chicken.jpg)] bg-cover p-40 text-white mb-32">
       <Section className="mt-4" row>
         <SectionExplain className="flex flex-col gap-4 w-[60%]">
           <SectionHeading className="animate-fade-up animate-duration-[300ms] animate-delay-300 animate-ease-in">
@@ -22,7 +22,7 @@ function HeroSection() {
           </SectionDescription>
 
           <div className="flex gap-6 animate-fade-up animate-duration-[700ms] animate-delay-700 animate-ease-in-out">
-            <Button>Bermitra sekarang</Button>
+            <Button>Layanan Kami</Button>
           </div>
         </SectionExplain>
 
@@ -160,7 +160,7 @@ function OurOfficeSection() {
         <div className="space-y-5 py-10" data-aos-offset="0" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
           {locations.map((location, i) => (
             <div key={i} className="flex items-center gap-5">
-              <img className="w-10" src="./icons/map.png" alt="icon" />
+              <img className="w-10" src="/icons/map.png" alt="icon" />
               <p className="font-bold text-lg text-[#2E3135]">
                 {location.name}
               </p>
@@ -170,24 +170,6 @@ function OurOfficeSection() {
 
         <Button>Lihat lokasi</Button>
       </SectionExplain>
-    </Section>
-  );
-}
-
-function SectionTwo() {
-  return (
-    <Section className="mt-4">
-      <div className="bg-[#F0F6FF] p-12 md:p-20 w-full rounded-3xl flex md:flex-row flex-col-reverse justify-between items-center">
-        <div className="flex flex-col gap-6 md:w-3/4 md:mt-0 mt-4">
-          <SectionHeading className="text-xl mr-5">
-            Kami selalu siap mendengarkan masalah anda
-          </SectionHeading>
-          <Button className="w-fit">Hubungi</Button>
-        </div>
-        <div data-aos-offset="0" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
-          <img src="/images/home3.png" alt="hero" />
-        </div>
-      </div>
     </Section>
   );
 }
@@ -222,7 +204,6 @@ function MainPage() {
       <OurServicesSection />
       <WhyServicesSection />
       <OurOfficeSection />
-      <SectionTwo />
       <SectionThree />
     </>
   );

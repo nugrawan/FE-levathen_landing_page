@@ -11,7 +11,7 @@ function NavLogo({ blue }) {
       className="flex gap-2 bg-transparent items-center text-lg cursor-pointer animate-fade-down animate-once animate-duration-1000 animate-delay-300 animate-ease-out"
       onClick={() => navigate("/")}
     >
-      <img className="w-7 border-4 rounded-md h-10 overflow-hidden " src="../../public/logo.png" alt="logo" />
+      <img className="w-6 rounded-md h-10 overflow-hidden " src="/logo.png" alt="logo" />
       <h1
         className={rc(
           "text-primary-default text-lg sm:text-2xl font-bold",
@@ -26,16 +26,12 @@ function NavLogo({ blue }) {
 
 const navItemList = [
   {
-    name: "About Us",
-    path: "/about",
-  },
-  {
     name: "Services",
-    path: "/pricing",
+    path: "/services",
   },
   {
     name: "Products",
-    path: "/spaces",
+    path: "/products",
   },
   {
     name: "Contact us",
@@ -51,7 +47,7 @@ function NavItems({ blue }) {
         <div
           key={i}
           className={rc(
-            "opacity-80 hover:opacity-100 cursor-pointer",
+            "opacity-80 hover:underline cursor-pointer",
             blue && "text-white"
           )}
           onClick={() => navigate(item.path)}
@@ -59,7 +55,10 @@ function NavItems({ blue }) {
           {item.name}
         </div>
       ))}
-      <Button variant={blue ? "secondary" : "default"}>Sign up</Button>
+      <div className="flex gap-2">
+        <Button variant={blue ? "secondary" : "default"}>Sign up</Button>
+        <Button className={blue && 'border'} variant={blue ? "default" : "secondary"}>Sign In</Button>
+      </div>
     </div>
   );
 }
@@ -84,8 +83,8 @@ function DrawerWithNavigation({ pathname }) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
-          fill={pathname === "/about" ? "white" : "black"}
-          stroke={pathname === "/about" ? "white" : "black"}
+          fill={pathname === "/contact-us" ? "white" : "black"}
+          stroke={pathname === "/contact-us" ? "white" : "black"}
           strokeWidth={2}
         >
           <path
@@ -133,7 +132,7 @@ function DrawerWithNavigation({ pathname }) {
 
 function Navbar() {
   const pathname = useLocation().pathname;
-  const blue = pathname === "/about";
+  const blue = pathname === "/contact-us";
   return (
     <div className={rc("w-full ", blue && "bg-primary-default")}>
       <div

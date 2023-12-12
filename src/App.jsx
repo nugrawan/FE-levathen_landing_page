@@ -2,10 +2,9 @@ import Navbar from "@/components/nav";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Footer, FooterMobile } from "./components/footer";
 import { MainPage } from "./pages";
-import AboutPage from "./pages/about";
-import SpacesPage from "./pages/spaces";
-import ContactUsPage from "./pages/contact-us";
-import PricingPage from "./pages/pricing";
+import Products from "./pages/products";
+import ContactUs from "./pages/contact-us";
+import Services from "./pages/services";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from "react";
@@ -20,10 +19,9 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="about/*" element={<AboutPage />} />
-        <Route path="pricing/*" element={<PricingPage />} />
-        <Route path="spaces/*" element={<SpacesPage />} />
-        <Route path="contact-us/*" element={<ContactUsPage />} />
+        <Route path="products/*" element={<Products />} />
+        <Route path="services/*" element={<Services />} />
+        <Route path="contact-us/*" element={<ContactUs />} />
       </Routes>
       <Footer />
       <FooterMobile />
