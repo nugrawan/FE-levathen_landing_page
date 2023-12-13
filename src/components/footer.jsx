@@ -120,10 +120,10 @@ export function Footer() {
 
 export function FooterMobile() {
   return (
-    <footer className=" pt-16 bg-primary-default m-5 p-10 rounded-xl cont md:hidden block">
+    <footer className="pt-10 bg-primary-default pb-5 rounded-t-xl cont md:hidden block">
       <div className="flex flex-col items-center border-b py-5 text-white">
         <h1 className="text-2xl font-bold flex gap-2">Levathen</h1>
-        <ul className="flex flex-col gap-4 my-12 text-center">
+        <ul className="flex text-sm flex-col gap-4 my-12 text-center">
           <a href="/about">
             About Us
           </a>
@@ -148,7 +148,7 @@ export function FooterMobile() {
       </div>
 
       <div className="mt-6 cont">
-        <p className="font-thin text-center text-gray-200">
+        <p className="font-thin text-sm text-center text-gray-200">
           © 2023 All rights reserved - Levathen
         </p>
       </div >

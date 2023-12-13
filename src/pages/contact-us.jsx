@@ -60,8 +60,7 @@ function ContactSection() {
             <CardTitle>{contact.title}</CardTitle>
             <CardDesc>{contact.desc}</CardDesc>
             <div className="inline-flex gap-2 cursor-pointer group items-center">
-              <p className="text-primary-default font-bold">{contact.link}</p>
-              <img src="/icons/r-arrow.png" alt="icon" className="transition-transform group-hover:translate-x-2 w-5 h-5" />
+              <p className="text-primary-default text-sm font-semibold">{contact.link}</p>
             </div>
           </Card>
         ))}
@@ -81,7 +80,7 @@ function FormSection() {
           Kami selalu terbuka untuk kritik dan saran dari kalian untuk menjadi lebih baik
         </SectionDescription>
       </SectionExplain>
-      <div className="md:px-10 w-[70%] mx-auto">
+      <div className="md:px-10 px-5 w-full md:w-[70%] mx-auto">
         <form action="" className="flex gap-10 flex-col text-xs md:text-base">
           <input
             className="px-8 py-4 w-full border rounded-full focus:outline-primary-default caret-primary-default"
@@ -97,7 +96,7 @@ function FormSection() {
             id="lastName"
             placeholder="Last Name"
           />
-          <div className="flex gap-10">
+          <div className="flex md:flex-row flex-col gap-10">
             <input
               className="px-8 py-4 w-full border rounded-full focus:outline-primary-default caret-primary-default"
               type="email"
